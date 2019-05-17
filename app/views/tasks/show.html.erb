@@ -1,0 +1,23 @@
+<h1>タスク詳細</h1>
+<p>
+  <b>【タイトル】</b>
+  <br>
+  <%= @task.title %>
+</p>
+
+<p>
+  <b>【本文】</b>
+  <%= simple_format(@task.body) %>
+</p>
+
+<p>
+  <b>【期限】</b>
+  <br>
+  <%= @task.dua_date %>
+</p>
+
+<p>
+  <%= link_to "戻る", tasks_path %>
+  <%= link_to "編集", edit_task_path %>
+  <%= link_to "削除", task_path , method: :delete, data: {confirm: 'タスクを削除してよろしいですか？'} %>
+</p>
