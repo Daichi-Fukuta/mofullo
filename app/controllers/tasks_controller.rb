@@ -1,12 +1,12 @@
 class TasksController < ApplicationController
-  def show
-    @task = Task.find(params[:id])
-  end
-  
   def index
     @task = Task.all
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+  
   def new
     @task = Task.new
   end
@@ -26,6 +26,12 @@ class TasksController < ApplicationController
     @task.update(task_params)
     redirect_to @task
   end
+    def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
+  end
+
 
   private  
 
