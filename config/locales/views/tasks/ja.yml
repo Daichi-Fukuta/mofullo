@@ -1,0 +1,6 @@
+ja:
+  tasks:
+    new:
+      title: タスク登録フォーム
+    edit:
+      title: タスク更新フォーム
